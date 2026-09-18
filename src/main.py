@@ -1,3 +1,6 @@
+from leitura_entrada import ler_entrada
+
+
 def permutation(points):
     if len(points) <= 1:
         return [points]
@@ -41,3 +44,18 @@ def distance_calculator(permutation, data):
             best_route = order
 
     return best_route, best_total
+
+
+def main(caminho_arquivo):
+    locais, chaves = ler_entrada(caminho_arquivo)
+
+    if locais is None:
+        return
+
+    rotas = permutation(chaves)
+    melhor_rota, _ = distance_calculator(rotas, locais)
+    print("".join(melhor_rota))
+
+
+if __name__ == "__main__":
+    main("entradas/exemplo1.txt")
