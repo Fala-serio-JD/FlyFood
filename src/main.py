@@ -53,9 +53,19 @@ def main(caminho_arquivo):
         return
 
     rotas = permutation(chaves)
-    melhor_rota, _ = distance_calculator(rotas, locais)
-    print("".join(melhor_rota))
+    melhor_rota, distancia = distance_calculator(rotas, locais)
 
+    tempo = distancia
+
+    trajeto = "R -> " + " -> ".join(melhor_rota) + " -> R"
+
+    resultado = (
+        f"Melhor trajeto: {trajeto}\n"
+        f"Distância total: {distancia}\n"
+        f"Tempo percorrido: {tempo} minutos"
+    )
+
+    print(resultado)
 
 if __name__ == "__main__":
-    main("entradas/exemplo1.txt")
+    main("FlyFood/entradas/exemplo1.txt")
