@@ -68,4 +68,5 @@ def main(caminho_arquivo):
     print(resultado)
 
 if __name__ == "__main__":
-    main("FlyFood/entradas/exemplo1.txt")
+    main("FlyFood/entradas/matriz1.txt")
+    

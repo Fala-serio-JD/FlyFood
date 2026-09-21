@@ -36,5 +36,6 @@ def ler_entrada(caminho_arquivo):
             print("O arquivo solicitado não foi encontrado.")
             locais = lista_chaves = None
             return locais, lista_chaves 
-            
-todos_os_pontos, chaves = ler_entrada("entradas/exemplo1.txt") 
+
+
+todos_os_pontos, chaves = ler_entrada("entradas/matriz1.txt") 
